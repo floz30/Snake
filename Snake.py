@@ -1,5 +1,4 @@
-
-class Snake():
+class Snake:
     def __init__(self, length):
         self.body = []
         self.length = length
@@ -23,7 +22,7 @@ class Snake():
 
     def has_bitten(self):
         """
-
+        Vérifie si le serpent s'est mordu
         :return:
         """
         head = self.body[-1]
@@ -32,6 +31,12 @@ class Snake():
         return False
 
     def eat(self, x, y):
+        """
+        Mange une pomme et allonge la taille du serpent de 3
+        :param x:
+        :param y:
+        :return:
+        """
         for i in range(3):
             self.body.insert(0, (x, y))
 
